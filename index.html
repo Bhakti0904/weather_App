@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Get real-time weather updates for any city with accurate forecasts and beautiful weather icons.">
+    <meta name="keywords" content="weather, forecast, real-time weather, weather app, city weather">
+    <meta name="author" content="Vrushali Bhangude">
+    <link rel="icon" type="image/png" href="img/img1.png">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Weather-APP</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+      <h1>Weather App</h1>
+      <div class="container">
+        <div class="weather-input">
+            <h3>Enter a City Name</h3>
+            <input class="city-input" type="text" placeholder="E.g., shevgaon, ahilyanagar, pune">
+            <button class="search-btn">Search</button>
+            <div class="seperator"></div>
+            <button class="location-btn">Use Current Location</button>
+        </div>
+         <div class="weather-data">
+            <div class="current-weather">
+                <div class="details">
+                    <h2>Pune (2025-01-01)</h2>
+                    <h4>Temperature: 19.10°C</h4>
+                    <h4>Wind: 4.31 M/S</h4>
+                    <h4>Humidity: 78%</h4>
+                </div>
+                <div class="icon">
+                    <img src="img/img2.png" alt="weather-icon" width="180px" height="180px">
+                    <h4>Moderate Rain</h4>
+                </div>
+            </div>
+            <div class="days-forecast">
+                <h2>5-Day Forecast</h2>
+                <ul class="weather-cards">
+                    <li class="card">
+                        <img src="cloudy2.jpeg" alt="weather-icon" width="60px" height="60px">
+                        <h3>(2025-03-04)</h3>
+                        <h4>Temp: 19.10°C</h4>
+                        <h4>Wind: 4.31 M/S</h4>
+                        <h4>Humidity: 78%</h4>
+                    </li>
+                    <li class="card">
+                        <img src="cloudy2.jpeg" alt="weather-icon" width="60px" height="60px">
+                        <h3>(2025-03-05)</h3>
+                        <h4>Temp: 19.10°C</h4>
+                        <h4>Wind: 4.31 M/S</h4>
+                        <h4>Humidity: 78%</h4>
+                    </li>
+                    <li class="card">
+                        <img src="cloudy2.jpeg" alt="weather-icon" width="60px" height="60px">
+                        <h3>(2025-03-06)</h3>
+                        <h4>Temp: 19.10°C</h4>
+                        <h4>Wind: 4.31 M/S</h4>
+                        <h4>Humidity: 78%</h4>
+                    </li>
+                    <li class="card">
+                        <img src="cloudy2.jpeg" alt="weather-icon" width="60px" height="60px">
+                        <h3>(2025-03-07)</h3>
+                        <h4>Temp: 19.10°C</h4>
+                        <h4>Wind: 4.31 M/S</h4>
+                        <h4>Humidity: 78%</h4>
+                    </li>
+                    <li class="card">
+                        <img src="cloudy2.jpeg" alt="weather-icon" width="60px" height="60px">
+                        <h3>(2025-03-08)</h3>
+                        <h4>Temp: 19.10°C</h4>
+                        <h4>Wind: 4.31 M/S</h4>
+                        <h4>Humidity: 78%</h4>
+                    </li>
+                </ul>
+            </div>
+         </div>
+      </div>
+
+      <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>Weather App</h2>
+                <p>Stay updated with the latest weather information. Plan your day with accurate forecasts.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Forecast</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-section weather">
+                <h2>Current Weather</h2>
+                <div id="weather-info">
+                    <p>Loading weather...</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Weather App | Designed by Team3 
+        </div>
+    </footer>
+
+</body>
+</html>

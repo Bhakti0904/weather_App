@@ -1,0 +1,350 @@
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/open-sans@4.5.3/index.css');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans',sans-serif;
+}
+body{
+    background: #8ec3e8;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 10.01%);
+    background-size: 20px 20px;
+    opacity: 0.3;
+    pointer-events: none;
+    animation: moveDots 10s linear infinite;
+}
+
+@keyframes moveDots {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 20px 20px;
+    }
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-section:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.footer-section h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #f4f4f4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #f4f4f4;
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f4f4f4;
+    transform: translateY(-5px) scale(1.2);
+}
+
+#weather-info {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #ccc;
+}
+
+#weather-info img {
+    vertical-align: middle;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+#weather-info img:hover {
+    transform: rotate(360deg);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #444;
+    font-size: 0.9rem;
+    color: #ccc;
+    position: relative;
+    z-index: 1;
+}
+
+/* 3D Effect for Footer Bottom */
+.footer-bottom::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 80%;
+    height: 10px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), transparent);
+    transform: translateX(-50%) perspective(500px) rotateX(30deg);
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* Add animation to weather cards */
+.weather-cards .card {
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.weather-cards .card:hover {
+    transform: translateY(-10px) scale(1.05); /* Makes card scale up and lift slightly */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Adds stronger shadow */
+}
+
+/* Optional: add a subtle fade-in animation when the cards load */
+.weather-cards .card {
+    opacity: 0;
+    animation: fadeIn 0.6s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+h1{
+    color: #fff;
+    padding: 18px 0;
+    text-align: center;
+    font-size: 1.75rem;
+    background: #5f7ac5;
+}
+.container{
+    display: flex;
+    gap: 35px;
+    padding: 30px;
+}
+.weather-input {
+     width: 550px;
+}
+.weather-input input{
+    width: 100%;
+    height: 46px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 1.07rem;
+    border-radius: 4px;
+    border: 1px solid #edc3c3;
+    margin: 10px 0 15px 0;
+}
+.weather-input .seperator{
+    height: 1px;
+    width: 100%;
+    background: #3a3737;
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.weather-input .seperator::before{
+    content: "Or";
+    color: #6C757D;
+    font-size: 1.18rem;
+    padding: 0 15px;
+    background: #E3F2FD;
+    margin-top: -4px;
+
+}
+.weather-input button{
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #FFF;
+    font-size: 1rem;
+    border-radius: 4px;
+    background: #5372F0;
+}
+.weather-input .location-btn{
+    background: #6C757D;
+}
+.weather-data{
+    width: 100%;
+}
+.current-weather{
+    color: #FFF;
+    display: flex;
+    border-radius: 4px;
+    padding: 20px 70px 20px 20px;
+    background: #44528b;
+    justify-content: space-between;
+}
+.current-weather h2{
+    font-size: 2.2rem;
+}
+.weather-data h4{
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.current-weather .icon img{
+    max-width: 100px;
+    margin-top: -10px;
+}
+.current-weather .icon h4{
+    margin-top: -10px;
+    text-transform: capitalize;
+}
+.days-forecast h2{
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+.weather-cards{
+    display: flex;
+    gap: 60px;
+}
+.weather-cards .card{
+    list-style: none;
+    color: #FFF;
+    padding: 18px 16px;
+    border-radius: 10px;
+    background: #f05277;
+    width: calc(100/5);
+}
+.weather-cards .card img{
+    
+    border-radius: 180px;
+}
+@media (max-width: 1400px) {
+    .weather-data .current-weather {
+        padding: 20px;
+    }
+    .weather-cards {
+        flex-wrap: wrap;
+    }
+    .weather-cards .card {
+        flex: 1 1 calc(25% - 15px); 
+    }
+}
+
+@media (max-width: 1200px) {
+    .weather-cards .card {
+        flex: 1 1 calc(33.33% - 15px); 
+    }
+}
+
+@media (max-width: 950px) {
+    .weather-input {
+        width: 100%;
+    }
+    .weather-cards .card {
+        flex: 1 1 calc(50% - 15px); 
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+    .weather-input {
+        width: 100%; 
+    }
+}
